@@ -1,6 +1,7 @@
 #include "dollartoeuroconverter.hpp"
-
+#include <memory>
 #include <string>
+
 
 DollarToEuroConverter::DollarToEuroConverter()
 {
@@ -20,3 +21,7 @@ std::string DollarToEuroConverter::toString() const{
 void DollarToEuroConverter::print() const{
   std::cout << toString();
 }
+
+
+
+

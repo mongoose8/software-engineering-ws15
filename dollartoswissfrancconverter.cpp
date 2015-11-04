@@ -1,0 +1,22 @@
+#include "dollartoswissfrancconverter.hpp"
+
+#include <string>
+
+DollarToSwissFrancConverter::DollarToSwissFrancConverter()
+{
+}
+
+/*In: double value of dollars
+ *Out: Yen value of input dollars as of 3.11.15
+ */
+double DollarToSwissFrancConverter::convert(double inputDollars){
+  return inputDollars*0.9941;
+}
+
+std::string DollarToSwissFrancConverter::toString() const{
+  return "Dollar to SwissFranc Converter";
+}
+
+void DollarToSwissFrancConverter::print() const{
+  std::cout << toString();
+}
