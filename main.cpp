@@ -8,6 +8,8 @@
 #include "celsiustofahrenheitconverter.hpp"
 #include "celsiustokelvinconverter.hpp"
 #include "dollartoswissfrancconverter.hpp"
+#include "factory.hpp"
+
 
 
 
@@ -17,13 +19,18 @@ int main(int argc, char* argv[])
   std::string conversion = argv[1];
   std::string value = argv[2];
   
+  auto myConverter = Factory::instance()->create(conversion);
+  
+   std::cout << myConverter->toString() << " has converted "<< std::stod(value) << " to " << myConverter->convert(std::stod(value)) <<"  "<<std::endl;
+  
+  
   /*
    * TODO
    *
    * use desired conversion here
    *
   */
-  if(conversion == "DollarToEuro")
+ /* if(conversion == "DollarToEuro")
   {
      auto myConverter = std::make_shared<DollarToEuroConverter>();
      std::cout << myConverter->toString() << " has converted "<< std::stod(value) << " Dollar to " << myConverter->convert(std::stod(value)) <<" Euros!"<<std::endl;
@@ -63,7 +70,7 @@ int main(int argc, char* argv[])
   {
     auto myConverter5 = std::make_shared<CelsiusToKelvinConverter>();
     std::cout << myConverter5->toString() << " has converted "<< std::stod(value) << " Celsius to " << myConverter5->convert(std::stod(value)) <<" Kelvin!"<<std::endl;
-  }
+  }*/
 
   return 0;
 }
