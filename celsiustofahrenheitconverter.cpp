@@ -10,7 +10,7 @@ CelsiusToFahrenheitConverter::CelsiusToFahrenheitConverter()
  *Out: Yen value of input dollars as of 3.11.15
  */
 double CelsiusToFahrenheitConverter::convert(double inCelsius){
-  return inCelsius*32;
+ return inCelsius*1.8+32;
 }
 
 std::string CelsiusToFahrenheitConverter::toString() const{

@@ -10,7 +10,7 @@ CelsiusToKelvinConverter::CelsiusToKelvinConverter()
  *Out: Yen value of input dollars as of 3.11.15
  */
 double CelsiusToKelvinConverter::convert(double inCelsius){
-  return inCelsius*273.15;
+  return inCelsius+273;
 }
 
 std::string CelsiusToKelvinConverter::toString() const{
