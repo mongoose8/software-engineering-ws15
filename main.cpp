@@ -8,28 +8,47 @@
 #include "celsiustofahrenheitconverter.hpp"
 #include "celsiustokelvinconverter.hpp"
 #include "dollartoswissfrancconverter.hpp"
-//#include "factory.hpp"
+#include "factory.hpp"
 #include "decorator.hpp"
 #include "unitconverter.hpp"
 #include "temparaturconverter.hpp"
 #include "inverse.hpp"
-
+#include <deque>
+#include "command.hpp"
+#include <cctype>
+#include <algorithm>
+#include <sstream>
 
 
 
 
 int main(int argc, char* argv[])
 {
- // std::string conversion = argv[1];
- // std::string value = argv[2];
+ std::string conversion;
+  std::string value;
+ std::deque<Command> commands{};
+  for(std::string line; std::getline(std::cin, line);)
+   {
+      std::stringstream cmd{line};  
+      cmd >> conversion >> value;
+      commands.push_back({conversion, stod(value)});   
+   }
   
  // auto myConverter = Factory::instance()->create(conversion);
   
 //   std::cout << myConverter->toString() << " has converted "<< std::stod(value) << " to " << myConverter->convert(std::stod(value)) <<"  //"<<std::endl;
-  std::shared_ptr<UnitConverter> a = std::make_shared<Inverse>(std::make_shared<MeterToMileConverter>());
-  std::shared_ptr<UnitConverter> b = std::make_shared<MeterToMileConverter>();
-  std::cout<<" "<<b->convert(a -> convert(30))<<std::endl;
-  
+  std::shared_ptr<Factory> fac;
+  fac = fac->instance();
+  std::shared_ptr<UnitConverter> converter;
+  for(auto i : commands)
+  {
+     converter = fac->create(i.command);
+    if(converter)
+      {
+        std::cout << converter->convert(i.value) << std::endl;
+      }
+   
+  }
   /*
    * TODO
    *
