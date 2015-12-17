@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
  // auto myConverter = Factory::instance()->create(conversion);
   
 //   std::cout << myConverter->toString() << " has converted "<< std::stod(value) << " to " << myConverter->convert(std::stod(value)) <<"  //"<<std::endl;
-  std::shared_ptr<UnitConverter> a = std::make_shared<MeterToFeetConverter>(std::make_shared<MeterToMileConverter>());
+  std::shared_ptr<UnitConverter> a = std::make_shared<DollarToSwissFrancConverter>(std::make_shared<DollarToPoundConverter>());
   std::cout<< a -> toString() <<" "<<a -> convert(30)<<std::endl;
   
   /*

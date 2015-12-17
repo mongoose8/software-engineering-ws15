@@ -7,7 +7,7 @@
 class MeterToFeetConverter : public lengthconverter {
   public:
     MeterToFeetConverter(){}
-    MeterToFeetConverter(std::shared_ptr<UnitConverter> decorate):lengthconverter{decorate}{}
+    MeterToFeetConverter(std::shared_ptr<UnitConverter> decorate):currencyconverter{decorate}{}
     double convert(double inMeters);
     std::string toString() const;
     void print() const;

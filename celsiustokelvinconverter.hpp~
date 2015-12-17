@@ -6,8 +6,8 @@
 
 class CelsiusToKelvinConverter : public temperatureconverter {
   public:
-    CelsiusToKelvinConverter(){}
-    CelsiusToKelvinConverter(std::shared_ptr<UnitConverter> decorate):temperatureconverter{decorate}{};
+    CelciusToKelvinConverter(){}
+    CelciusToKelvinConverter(std::shared_ptr<UnitConverter> decorate):temperatureconverter{decorate}{};
     double convert(double inCelsius);
     std::string toString() const;
     void print() const;

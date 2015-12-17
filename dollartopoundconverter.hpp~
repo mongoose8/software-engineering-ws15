@@ -6,8 +6,7 @@
 
 class DollarToPoundConverter : public currencyconverter {
   public:
-    DollarToPoundConverter(){}
-    DollarToPoundConverter(std::shared_ptr<UnitConverter> decorate):currencyconverter{decorate}{}
+    DollarToPoundConverter();
     double convert(double inDollars);
     std::string toString() const;
     void print() const;

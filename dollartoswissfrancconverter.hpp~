@@ -6,8 +6,7 @@
 
 class DollarToSwissFrancConverter : public currencyconverter {
   public:
-    DollarToSwissFrancConverter(){}
-    DollarToSwissFrancConverter(std::shared_ptr<UnitConverter> decorate):currencyconverter{decorate}{}
+    DollarToSwissFrancConverter();
     double convert(double inDollars);
     std::string toString() const;
     void print() const;

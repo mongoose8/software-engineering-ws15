@@ -11,7 +11,7 @@ main: $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 	g++ --std=c++11 -Wall -c -o $@ $<
 
 test:
-	./main DollarToEuro 1000
+	./main 
 
 clean:
 	rm main *.o

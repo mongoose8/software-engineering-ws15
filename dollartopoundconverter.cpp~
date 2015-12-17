@@ -2,6 +2,9 @@
 
 #include <string>
 
+DollarToPoundConverter::DollarToPoundConverter()
+{
+}
 
 /*In: double value of dollars
  *Out: Yen value of input dollars as of 3.11.15

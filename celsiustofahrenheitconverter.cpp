@@ -2,15 +2,16 @@
 
 #include <string>
 
-CelsiusToFahrenheitConverter::CelsiusToFahrenheitConverter()
-{
-}
 
-/*In: double value of dollars
- *Out: Yen value of input dollars as of 3.11.15
- */
+
+
 double CelsiusToFahrenheitConverter::convert(double inCelsius){
- return inCelsius*1.8+32;
+  
+ if(decorate == nullptr)
+     return inCelsius*1.8+32;
+
+ else
+ return decorate->convert(inCelsius*1.8+32); 
 }
 
 std::string CelsiusToFahrenheitConverter::toString() const{
