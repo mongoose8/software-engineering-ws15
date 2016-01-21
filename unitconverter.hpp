@@ -11,9 +11,9 @@ class UnitConverter
     UnitConverter();
     UnitConverter(std::shared_ptr<UnitConverter> const& deco) : decorate{deco}{};
     
-    virtual double convert(double inValue) = 0;
-    virtual std::string toString() const = 0;
-    virtual void print() const = 0;
+    virtual double convert(double inValue) {}
+    virtual std::string toString() {}
+    virtual void print() {}
     
     
   protected:

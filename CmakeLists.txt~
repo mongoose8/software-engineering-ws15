@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(unitconverter)
+set(CMAKE_BUILD_TYPE Release)
+ 
+#Bring the headers, such as Student.h into the project
+#include_directories(include)
+ 
+#However, the file(GLOB...) allows for wildcard additions:
+#file(GLOB SOURCES "src/*.cpp")
+ 
+#Generate the shared library from the sources
+#add_library(testStudent SHARED ${SOURCES})
+
+add_executable(converter celsiustokelvinconverter.hpp command.hpp currencyconverter.hpp decorator.hpp dollartoeuroconverter.cpp dollartoeuroconverter.hpp dollartopoundconverter.cpp dollartopoundconverter.hpp dollartoswissfrancconverter.cpp dollartoswissfrancconverter.hpp factory.cpp factory.hpp inverse.cpp inverse.hpp lengthconverter.hpp main.cpp metertofeetconverter.cpp metertofeetconverter.hpp metertomileconverter.cpp metertomileconverter.hpp temparaturconverter.hpp unitconverter.cpp unitconverter.hpp )
+ 
+#Set the location for library installation -- i.e., /usr/lib in this case
+# not really necessary in this example. Use "sudo make install" to apply
+#install(TARGETS testStudent DESTINATION /usr/lib)

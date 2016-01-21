@@ -31,6 +31,6 @@ class Factory {
  static std::shared_ptr<Factory> instance_;
 };
 
-//std::shared_ptr<Factory> Factory::instance_ = 0;
+
 
 #endif // FACTORY_HPP

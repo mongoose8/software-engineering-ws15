@@ -1,8 +1,5 @@
 #include "factory.hpp"
 
-std::shared_ptr<Factory> Factory::instance_ = nullptr;
-
-
 std::shared_ptr<UnitConverter>  Factory::create(std::string const& c)
 {
    auto it = converters.find(c);

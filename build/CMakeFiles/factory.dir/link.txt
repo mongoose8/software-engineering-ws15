@@ -1,0 +1,2 @@
+/usr/bin/ar cr libfactory.a  CMakeFiles/factory.dir/factory.cpp.o CMakeFiles/factory.dir/celsiustofahrenheitconverter.cpp.o CMakeFiles/factory.dir/celsiustokelvinconverter.cpp.o CMakeFiles/factory.dir/dollartoeuroconverter.cpp.o CMakeFiles/factory.dir/dollartopoundconverter.cpp.o CMakeFiles/factory.dir/dollartoswissfrancconverter.cpp.o CMakeFiles/factory.dir/inverse.cpp.o CMakeFiles/factory.dir/metertofeetconverter.cpp.o CMakeFiles/factory.dir/metertomileconverter.cpp.o CMakeFiles/factory.dir/unitconverter.cpp.o
+/usr/bin/ranlib libfactory.a

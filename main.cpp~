@@ -18,7 +18,7 @@
 #include <cctype>
 #include <algorithm>
 #include <sstream>
-
+#include "factory.hpp"
 
 
 
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
  // auto myConverter = Factory::instance()->create(conversion);
   
 //   std::cout << myConverter->toString() << " has converted "<< std::stod(value) << " to " << myConverter->convert(std::stod(value)) <<"  //"<<std::endl;
-  Factory * fac;
+  std::shared_ptr<Factory> fac;
   fac = fac->instance();
   std::shared_ptr<UnitConverter> converter;
   for(auto i : commands)

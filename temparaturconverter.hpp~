@@ -1,5 +1,5 @@
-#ifndef TEMPARATURCONVERTER_HPP
-#define TEMPARATURCONVERTER_HPP
+#ifndef TEMPARATURCONVERTER_H
+#define TEMPARATURCONVERTER_H
 
 #include "decorator.hpp"
 #include "unitconverter.hpp"
@@ -16,4 +16,4 @@ class temperatureconverter : public UnitConverter
   
 };
 
-#endif //TEMPARATURCONVERTER_HPP
+#endif //TEMPARATURCONVERTER_H

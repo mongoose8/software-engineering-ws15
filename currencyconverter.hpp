@@ -8,9 +8,9 @@ class currencyconverter : public UnitConverter
   public:
     currencyconverter(){}
     currencyconverter(std::shared_ptr<UnitConverter> deco) : UnitConverter(deco){}
-    virtual double convert(double inValue) = 0;
-    virtual std::string toString() const = 0;
-    virtual void print() const = 0;
+    virtual double convert(double inValue) {}
+    virtual std::string toString() {}
+    virtual void print() {}
 };
 
 #endif //CURRENCYCONVERTER_H
