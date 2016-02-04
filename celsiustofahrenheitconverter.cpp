@@ -7,7 +7,15 @@
 
 double CelsiusToFahrenheitConverter::convert(double inCelsius){
   
- if(decorate == nullptr)
+ if(inCelsius < -273.15)
+  {
+        throw std::out_of_range("Input value is below -273.15");
+        return 0;
+  }
+
+
+
+if(decorate == nullptr)
      return inCelsius*1.8+32;
 
  else

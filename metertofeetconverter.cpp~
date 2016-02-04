@@ -8,7 +8,11 @@
  *Out: Yen value of input dollars as of 3.11.15
  */
 double MeterToFeetConverter::convert(double inMeters){
-  return inMeters*3.28084;
+
+  if(decorate == nullptr)
+     return inMeters*3.28084;
+  else
+  return decorate->convert(inMeters*3.28084);
 }
 
 std::string MeterToFeetConverter::toString() const{

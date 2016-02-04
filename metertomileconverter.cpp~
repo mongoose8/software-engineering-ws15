@@ -12,7 +12,7 @@ double MeterToMileConverter::convert(double inMeters){
   if(decorate == nullptr)
      return inMeters*0.00062;
   else
-  return decorate->convert(inMeters)*0.00062;
+  return decorate->convert(inMeters*0.00062);
 }
 
 std::string MeterToMileConverter::toString() const{

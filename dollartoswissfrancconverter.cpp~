@@ -10,7 +10,8 @@ double DollarToSwissFrancConverter::convert(double inputDollars){
 
   if(decorate == nullptr)
      return inputDollars*0.9941;
-  return inputDollars*0.9941;
+  else
+  return decorate->convert(inputDollars*0.9941);
 }
 
 std::string DollarToSwissFrancConverter::toString() const{

@@ -5,7 +5,10 @@
 
 struct Command
 {
-	Command(std::string cmd, double val):command{cmd},value{val}{}
+	Command(std::string cmd, double val):command{cmd},value{val}{
+             if(cmd==" ")
+              throw std::invalid_argument("");   
+        }
 
 
 	std::string command;

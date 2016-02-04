@@ -18,6 +18,7 @@
 #include <cctype>
 #include <algorithm>
 #include <sstream>
+#include <exception>
 //#include "factory.hpp"
 
 
@@ -31,7 +32,16 @@ int main(int argc, char* argv[])
    {
       std::stringstream cmd{line};  
       cmd >> conversion >> value;
+      try
+      {
       commands.push_back({conversion, stod(value)});   
+      }
+        catch (std::exception const& e)
+        {
+          std::cout << e.what() << std::endl;
+           continue;
+         }
+      
    }
   
  // auto myConverter = Factory::instance()->create(conversion);
@@ -45,7 +55,16 @@ int main(int argc, char* argv[])
      converter = fac->create(i.command);
     if(converter)
       {
+        try
+        {
         std::cout << converter->convert(i.value) << std::endl;
+        }
+      
+        catch (std::exception const& e)
+        {
+          std::cout << e.what() << std::endl;
+           continue;
+         }
       }
    
   }

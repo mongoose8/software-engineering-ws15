@@ -9,6 +9,10 @@
  */
 double DollarToEuroConverter::convert(double inputDollars){
 
+    if (inputDollars < 0)
+  {
+    throw std::out_of_range("value is negative!");
+  }
   if(decorate == nullptr)
      return inputDollars*0.88;
   else

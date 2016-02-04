@@ -10,6 +10,11 @@
  */
 double CelsiusToKelvinConverter::convert(double inCelsius){
 
+ if (inCelsius < -273.15)
+  {
+   throw std::out_of_range("Input value is below -273.15°C!");
+   }
+ 
  if(decorate == nullptr)
   return inCelsius+273;
 

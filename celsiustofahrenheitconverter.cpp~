@@ -3,7 +3,7 @@
 #include <string>
 
 
-CelsiusToFahrenheitConverter::CelsiusToFahrenheitConverter(std::shared_ptr<UnitConverter> decorate):temperatureconverter(decorate){}
+
 
 double CelsiusToFahrenheitConverter::convert(double inCelsius){
   
